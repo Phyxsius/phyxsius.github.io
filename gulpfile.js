@@ -1,13 +1,12 @@
 var gulp           = require('gulp');
-var sass           = require('gulp-ruby-sass'),
+var sass           = require('gulp-sass'),
 	sourcemaps     = require('gulp-sourcemaps'),
-	nodeSASS       = require('node-sass'),
 	autoprefixer   = require('gulp-autoprefixer');
 
 gulp.task('styles', function() {
 	gulp.src('sass/**/*.scss')
 		.pipe(sourcemaps.init())
-			.pipe(sass({outputStyle: 'nested'})
+			.pipe(sass({outputStyle: 'compressed'})
 			      	  .on('error', sass.logError)
 			      )
 		.pipe(autoprefixer({

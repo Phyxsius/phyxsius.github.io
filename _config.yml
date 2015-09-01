@@ -1,3 +1,5 @@
+exclude: [sass, .gitignore, node_modules]
+highlighter: pygments
 defaults:
   -
     scope:
