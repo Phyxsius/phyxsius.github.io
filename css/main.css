@@ -1,0 +1,24 @@
+html {
+  color: #333;
+  font-family: "RobotoDraft","Roboto",sans-serif;
+  font-size: 1em;
+  -webkit-font-smoothing: antialiased;
+  line-height: 1em; }
+
+:-webkit-full-screen a {
+  display: -webkit-flex;
+  display: flex; }
+
+:-moz-full-screen a {
+  display: flex; }
+
+:-ms-fullscreen a {
+  display: -ms-flexbox;
+  display: flex; }
+
+:fullscreen a {
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+
+/*# sourceMappingURL=main.css.map */
