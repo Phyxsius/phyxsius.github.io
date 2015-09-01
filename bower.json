@@ -1,0 +1,19 @@
+{
+  "name": "phyxsius.github.io",
+  "version": "1.0.0",
+  "homepage": "https://phyxsius.github.io",
+  "authors": [
+    "Andy <thingswithhandles@gmail.com>"
+  ],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "polymer": "Polymer/polymer#1.0.0"
+  }
+}
