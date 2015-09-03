@@ -1439,7 +1439,7 @@ ol {
   line-height: 18px;
   overflow: hidden;
   padding: 16px 16px;
-  width: 90%;
+  width: 100%;
 }
 
 .card__supporting-text ~ .card__supporting-text {
