@@ -5,3 +5,10 @@
 // Resets and dependencies
 @import "resets/resets";
 @import "typography/typography";
+
+// Components
+@import "card/card";
+@import "shadow/shadow";
+
+// Pages
+@import "page/_home";

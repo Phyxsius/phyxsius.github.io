@@ -1,5 +1,6 @@
 exclude: [sass, .gitignore, node_modules]
 highlighter: pygments
+excerpt_separator: <!--more-->
 defaults:
   -
     scope:

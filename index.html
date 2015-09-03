@@ -2,9 +2,23 @@
 title: Phyxsius
 ---
 
-<h1>Posts</h1>
-<ul class="posts">
+<div class="blog__posts">
 	{% for post in site.posts %}
-		<li>{{ post.date | date_to_string }} - <a href="{{ post.url }}">{{ post.title }}</a></li>
+		<div class="grid-cell--12-col">
+			<div class="card shadow--3dp">
+				<div class="card__media">
+					<h3>
+						<a href="{{ post.url }}">{{ post.title }}</a>
+					</h3>
+				</div>
+				<div class="card__supporting-text">
+					{{ post.excerpt }}
+				</div>
+				<div class="card__supporting-text">
+					{{ post.author }}
+					{{ post.date | date_to_string }}
+				</div>
+			</div>
+		</div>
 	{% endfor %}
-</ul>
+</div>
