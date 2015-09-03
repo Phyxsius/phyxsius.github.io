@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Hello World
-author: Andy Rose
+author: Andy
 ---
 
 My goal is for this page to be constantly evolving. <!--more-->A chance to play around with everything new and anything else I can't use, for whatever reason, with this page (Django projects, Laravel, learning new databases, etc) I will try and post about. That way I can see how far I've come in areas.
