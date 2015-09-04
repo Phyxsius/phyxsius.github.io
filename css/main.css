@@ -1781,7 +1781,7 @@ main .card h3 a {
 }
 
 main .card--about {
-  background: url("http://www.gravatar.com/avatar/9ffa49a806f3c5da3ee792d9f1143c4f.jpg?s=360") center/cover;
+  background: url("//www.gravatar.com/avatar/9ffa49a806f3c5da3ee792d9f1143c4f.jpg?s=360") center/cover;
 }
 
 main .card--about > .card__actions {
