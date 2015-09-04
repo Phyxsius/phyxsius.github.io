@@ -84,6 +84,7 @@
   overflow: hidden;
   padding: $card-vertical-padding $card-horizontal-padding;
   width: 100%;
+  box-sizing: border-box;
 
   & ~ & {
     border-top: 1px solid rgba(0, 0, 0, 0.1);

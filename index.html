@@ -2,11 +2,25 @@
 title: Phyxsius
 ---
 
-<div class="blog__posts">
+<div class="grid">
+	<div class="grid-cell grid-cell--4-col">
+		<div class="card shadow--2dp card--about">
+			<div class="card--expand"></div>
+			<div class="card__actions">
+				Andy Rose
+				<div class="layout-spacer"></div>
+				<a href="mailto:thingswithhandles@gmail.com" alt="Email me">
+					<i class="material-icons">email</i>
+				</a>
+			</div>
+		</div>
+	</div>
+
 	{% for post in site.posts %}
-		<div class="grid-cell--12-col">
-			<div class="card shadow--3dp">
+		<div class="grid-cell grid-cell--12-col">
+			<div class="card shadow--2dp">
 				<div class="card__media">
+					<img src="{{ site.baseurl }}/images/{{ post.image }}">
 					<h3>
 						<a href="{{ post.url }}">{{ post.title }}</a>
 					</h3>
@@ -14,10 +28,7 @@ title: Phyxsius
 				<div class="card__supporting-text">
 					{{ post.excerpt }}
 				</div>
-				<div class="card__supporting-text">
-					{{ post.author }}
-					{{ post.date | date_to_string }}
-				</div>
+
 			</div>
 		</div>
 	{% endfor %}
