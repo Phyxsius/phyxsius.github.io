@@ -2,4 +2,22 @@
 layout: default
 ---
 
-{{ content }}
+<div class="back">
+	<a href="/" title="go back" role="button">
+		<i class="material-icons" role="presentation">arrow_back</i>
+	</a>
+</div>
+
+<div class="grid blogpost">
+	<div class="grid-cell grid-cell--12-col">
+		<div class="card shadow--2dp">
+			<div class="card__media">
+				<img src="{{ site.baseurl }}/images/{{ page.image }}">
+				<h3>{{ page.title }}</h3>
+			</div>
+			<div class="content card__supporting-text">
+				{{ content }}
+			</div>
+		</div>
+	</div>
+</div>
