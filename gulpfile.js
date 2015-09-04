@@ -3,6 +3,8 @@ var sass           = require('gulp-sass'),
 	sourcemaps     = require('gulp-sourcemaps'),
 	concat         = require('gulp-concat-css'),
 	autoprefixer   = require('gulp-autoprefixer');
+var imagemin       = require('gulp-imagemin');
+var pngquant       = require('imagemin-pngquant');
 
 gulp.task('styles', function() {
 	gulp.src('sass/**/*.scss')
@@ -17,6 +19,16 @@ gulp.task('styles', function() {
         .pipe(concat('main.css'))
 		.pipe(sourcemaps.write('./'))
 		.pipe(gulp.dest('./css'));
+});
+
+gulp.task('optimize:images', function() {
+	gulp.src('images/*')
+        .pipe(imagemin({
+            progressive: true,
+            svgoPlugins: [{removeViewBox: false}],
+            use: [pngquant()]
+        }))
+        .pipe(gulp.dest('images'));
 });
 
 // Watch task
