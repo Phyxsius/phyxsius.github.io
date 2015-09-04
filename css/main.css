@@ -1736,6 +1736,10 @@ ol {
   box-shadow: 0 16px 24px 2px rgba(0, 0, 0, 0.14), 0 6px 30px 5px rgba(0, 0, 0, 0.12), 0 8px 10px -5px rgba(0, 0, 0, 0.2);
 }
 
+body {
+  background-color: #efefef;
+}
+
 body::before {
   background-image: url("/images/bg.jpg");
   background-size: cover;
@@ -1824,6 +1828,7 @@ main .card__media img {
   top: 0;
   left: 0;
   width: 100%;
+  min-height: 100%;
 }
 
 main .card__media h3 {
