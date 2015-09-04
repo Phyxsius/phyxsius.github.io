@@ -17,6 +17,20 @@
 	.card__media {
 		height: 280px;
 	}
+
+	.meta {
+		height: auto;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		jusity-content: flex-start;
+
+		& > * {
+			display: flex;
+			flex-direction: column;
+			align-items: flex-start;
+		}
+	}
 }
 
 .back {
