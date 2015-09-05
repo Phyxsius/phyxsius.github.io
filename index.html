@@ -3,24 +3,14 @@ title: Phyxsius
 ---
 
 <div class="grid">
-	<div class="grid-cell grid-cell--4-col">
-		<div class="card shadow--2dp card--about">
-			<div class="card--expand"></div>
-			<div class="card__actions">
-				Andy Rose
-				<div class="layout-spacer"></div>
-				<a href="mailto:thingswithhandles@gmail.com" alt="Email me">
-					<i class="material-icons">email</i>
-				</a>
-			</div>
-		</div>
-	</div>
-
 	{% for post in site.posts %}
-		<div class="grid-cell grid-cell--12-col">
+		{% if site.posts.first.title == post.title %}
+			<div class="grid-cell grid-cell--8-col">
+		{% else %}
+			<div class="grid-cell grid-cell--12-col">
+		{% endif %}
 			<div class="card shadow--2dp">
-				<div class="card__media">
-					<img src="{{ site.baseurl }}/images/{{ post.image }}">
+				<div class="card__media" style="background-image: url('{{ site.baseurl }}/images/{{ post.image }}')">
 					<h3>
 						<a href="{{ post.url }}">{{ post.title }}</a>
 					</h3>
@@ -31,5 +21,20 @@ title: Phyxsius
 
 			</div>
 		</div>
+
+		{% if site.posts.first.title == post.title %}
+			<div class="grid-cell grid-cell--8-col grid-cell--4-col-desktop grid-cell--about">
+				<div class="card shadow--2dp card--about">
+					<div class="card--expand"></div>
+					<div class="card__actions">
+						Andy Rose
+						<div class="layout-spacer"></div>
+						<a href="mailto:thingswithhandles@gmail.com" alt="Email me">
+							<i class="material-icons">email</i>
+						</a>
+					</div>
+				</div>
+			</div>
+		{% endif %}
 	{% endfor %}
 </div>

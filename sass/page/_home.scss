@@ -20,11 +20,19 @@ main {
 	max-width: 900px;
 	width: 100%;
 	margin: 0 auto;
+	transition: all 0.5s ease;
 
-	&.layout__content {
-		padding-top: 120px;
+	& * {
+		transition: all 0.5s ease;
 	}
 
+	&.layout__content {
+		padding-top: 30pt;
+
+		@media (min-width: $grid-desktop-breakpoint) {
+			padding-top: 100pt;
+		}
+	}
 	.card {
 		align-items: stretch;
 
@@ -38,6 +46,15 @@ main {
 			}
 		}
 	}
+
+	.grid-cell--about {
+		order: -1;
+
+		@media (min-width: $grid-desktop-breakpoint) {
+			order: initial;
+		}
+	}
+
 
 	.card--about {
 		background: url('//www.gravatar.com/avatar/9ffa49a806f3c5da3ee792d9f1143c4f.jpg?s=360') center / cover;
@@ -62,6 +79,7 @@ main {
 
 	.card__media {
 		box-sizing: border-box;
+		background-size: cover;
 		padding: 24px;
 		display: flex;
 		flex-grow: 1;
