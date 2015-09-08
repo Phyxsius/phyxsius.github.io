@@ -7,10 +7,11 @@
 		align-items: center;
 
 		& > * {
-			max-width: 512px;
-			margin: 16px auto;
-			font-size: 16px;
+			max-width: 43pc;
+			margin: 1pc auto;
+			font-size: 1pc;
 			line-height: 28px;
+			text-align: justify;
 		}
 	}
 
@@ -35,8 +36,8 @@
 
 .back {
 	position: absolute;
-	top: 16px;
-	left: 16px;
+	top: 1pc;
+	left: 1pc;
 	color: #fff;
 	z-index: 9999;
 
