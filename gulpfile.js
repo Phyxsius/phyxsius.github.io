@@ -6,7 +6,7 @@ var sass           = require('gulp-sass'),
 	autoprefixer   = require('gulp-autoprefixer');
 var imagemin       = require('gulp-imagemin');
 //var pngquant       = require('imagemin-pngquant');
-var minifyHTML = require('gulp-minify-html');
+var htmlmin        = require('gulp-htmlmin');
 
 gulp.task('styles', function() {
 	gulp.src('sass/**/*.scss')
@@ -37,15 +37,20 @@ gulp.task('optimize:images', function() {
 });
 
 gulp.task('optimize:html', function() {
-	var opts = {
-		conditionals: true,
-		spare: true,
-		empty: true
-	};
-
-	return gulp.src('./*.html')
-			   .pipe(minifyHTML(opts))
-			   .pipe(gulp.dest('./'));
+	return gulp.src('./_site/**/*.html')
+        .pipe(htmlmin({
+            collapseWhitespace: true,
+            removeComments: true,
+            conservativeCollapse: true,
+            collapseBooleanAttributes: true,
+            removeRedundantAttributes: true,
+            removeEmptyAttributes: true,
+            removeEmptyElements: true,
+            lint: false,
+            minifyJS: true,
+            minifyCSS: true,
+        }))
+        .pipe(gulp.dest('./_site/'));
 });
 
 // Watch task
