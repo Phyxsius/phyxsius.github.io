@@ -19,10 +19,6 @@
 	    <!-- Web Application Manifest -->
 	    <link rel="manifest" href="manifest.json">
 
-		<!-- Fonts -->
-	    <link href="https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic" rel="stylesheet" type="text/css">
-	    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
 		<!-- Google Analytics -->
 		<script async="" src="//www.google-analytics.com/analytics.js"></script>
 	    <script>
@@ -46,11 +42,17 @@
 
 		<script>
 		    var cb = function () {
-		        var l = document.createElement('link');
+		        var l = m = n = document.createElement('link');
 		        l.rel = 'stylesheet';
 		        l.href = '/css/main.css';
 		        var h = document.getElementsByTagName('head')[0];
-		        h.parentNode.insertBefore(l, h);
+		        h.parentNode.insertBefore(l.cloneNode(), h);
+
+		        // Fonts
+		        l.href = 'https://fonts.googleapis.com/css?family=RobotoDraft:400,500,700,400italic';
+		        h.parentNode.insertBefore(l.cloneNode(), h);
+		        l.href = 'https://fonts.googleapis.com/icon?family=Material+Icons';
+		        h.parentNode.insertBefore(l.cloneNode(), h);
 		    };
 		    var raf = requestAnimationFrame || mozRequestAnimationFrame ||
 		            webkitRequestAnimationFrame || msRequestAnimationFrame;
