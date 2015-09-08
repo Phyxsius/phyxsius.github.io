@@ -5,7 +5,8 @@ var sass           = require('gulp-sass'),
     minifyCSS      = require('gulp-minify-css'),
 	autoprefixer   = require('gulp-autoprefixer');
 var imagemin       = require('gulp-imagemin');
-var pngquant       = require('imagemin-pngquant');
+//var pngquant       = require('imagemin-pngquant');
+var minifyHTML = require('gulp-minify-html');
 
 gulp.task('styles', function() {
 	gulp.src('sass/**/*.scss')
@@ -23,6 +24,8 @@ gulp.task('styles', function() {
 		.pipe(gulp.dest('./css'));
 });
 
+
+// Optimize tasks
 gulp.task('optimize:images', function() {
 	gulp.src('images/*')
         .pipe(imagemin({
@@ -31,6 +34,18 @@ gulp.task('optimize:images', function() {
             use: [pngquant()]
         }))
         .pipe(gulp.dest('images'));
+});
+
+gulp.task('optimize:html', function() {
+	var opts = {
+		conditionals: true,
+		spare: true,
+		empty: true
+	};
+
+	return gulp.src('./*.html')
+			   .pipe(minifyHTML(opts))
+			   .pipe(gulp.dest('./'));
 });
 
 // Watch task
