@@ -20,6 +20,7 @@
   display: flex;
   flex-flow: row wrap;
   justify-content: space-between;
+  align-items: center;
 
   padding: ($padding * 2) $padding;
 
@@ -64,14 +65,16 @@
 
 .mini-footer--left-section,
 .mini-footer__left-section {
-  display: inline-block;
+  display: flex;
   order: 0;
+  align-items: center;
 }
 
 .mini-footer--right-section,
 .mini-footer__right-section {
-  display: inline-block;
+  display: flex;
   order: 1;
+  align-items: center;
 }
 
 .mini-footer--social-btn,
@@ -97,16 +100,10 @@
 
 
 .logo {
-  margin-bottom: $footer-min-padding;
+  float: left;
+
+  margin-bottom: 0;
+  margin: 0 $footer-min-padding;
   color: white;
   font-weight: 500;
-}
-
-@media screen and (min-width: 760px) {
-  .logo {
-    float: left;
-
-    margin-bottom: 0;
-    margin-right: $footer-min-padding;
-  }
 }
